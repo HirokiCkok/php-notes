@@ -3,6 +3,11 @@ version: '3.9'
 services:
   web:
     build: ./php
+    environment:
+      DB_HOST: db
+      DB_NAME: testdb
+      DB_USER: testuser
+      DB_PASS: testpass
     container_name: lamp-web
     ports:
       - "8080:80"
