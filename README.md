@@ -6,7 +6,12 @@
 # 起動
 docker compose up -d
 
+# MariaDB Monitorの起動
+docker exec -it lamp-db mariadb -u root -p
+（MYSQL_ROOT_PASSWORD に設定したパスワードを入力）
+
 # ブラウザ確認
 http://localhost:8080 → PHP動作確認 (phpinfo())
 http://localhost:8081 → phpMyAdmin ログイン画面
+
 ```
