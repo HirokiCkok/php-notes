@@ -30,6 +30,7 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d   # ← ここでマウント
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
