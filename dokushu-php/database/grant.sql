@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON selfphp.* TO 'selfusr'@'%' IDENTIFIED BY 'selfpass';
+FLUSH PRIVILEGES;
