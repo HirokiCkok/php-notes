@@ -11,4 +11,4 @@ var_dump('X' == 0);
 var_dump('3.14' == '3.14000');
 var_dump('3.14E2' == '314');
 var_dump('13xyz' == '13');
-echo '</pew>';
+echo '</pre>';
