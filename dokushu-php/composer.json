@@ -2,5 +2,8 @@
     "require": {
         "guzzlehttp/guzzle": "^7.10",
         "ezyang/htmlpurifier": "*"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "∧9.5"
     }
 }
