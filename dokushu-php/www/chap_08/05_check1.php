@@ -5,7 +5,7 @@
     <title>チェックボックス</title>
   </head>
   <body>
-    <form method="POST" action="check2.php">
+    <form method="POST" action="06_check2.php">
       あなたがよく使用する言語は？<br />
       <input id="php" type="checkbox" name="lang" value="PHP" />
       <label for="php">PHP</label>
