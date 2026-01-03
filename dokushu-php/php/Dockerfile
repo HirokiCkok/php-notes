@@ -6,6 +6,19 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli bcmath
 # Apache の rewrite モジュール有効化（学習の幅が広がる）
 RUN a2enmod rewrite
 
+# msmtp 設定
+COPY php/msmtprc /etc/msmtprc
+RUN chmod 600 /etc/msmtprc
+
+# sendmail 互換
+RUN apt-get update \
+  && apt-get install -y msmtp msmtp-mta \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+# php.ini
+COPY php/php.ini /usr/local/etc/php/php.ini
+
 # Composer（公式イメージからコピー）
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
