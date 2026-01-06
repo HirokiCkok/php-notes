@@ -1,0 +1,12 @@
+# 環境変数
+php/.env
+
+# メール設定（秘密情報）
+php/msmtprc
+
+# 依存関係
+vendor/
+node_modules/
+
+# OS
+.DS_Store
