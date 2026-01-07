@@ -1,5 +1,5 @@
 # 環境変数
-php/.env
+.env
 
 # メール設定（秘密情報）
 php/msmtprc
