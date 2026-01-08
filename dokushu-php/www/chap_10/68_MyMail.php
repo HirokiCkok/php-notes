@@ -19,6 +19,12 @@ class MyMail {
 
   // プロパティの情報を基にメールを送信
   public function send() : void {
+    // ★ 追加 From は .env があれば必ずそちらを優先
+    $envFrom = getenv('MAIL_FROM');
+    if ($envFrom !== false) {
+      $this->headers['From'] = $envFrom;
+    }
+
     $others = '';
     // $headersの内容を基にヘッダー情報（改行区切り）を生成
     foreach ($this->headers as $key => $value) {
